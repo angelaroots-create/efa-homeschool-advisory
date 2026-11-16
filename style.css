@@ -107,7 +107,7 @@ input::placeholder, textarea::placeholder { color: var(--muted); }
 
 main { padding: 28px 0 40px; }
 section { margin-bottom: 32px; }
-.lede { font-size: 1.05rem; max-width: 68ch; }
+.lede { font-size: 1.05rem; }
 
 /* Signature element: the commitment strip */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface);
@@ -118,9 +118,13 @@ section { margin-bottom: 32px; }
 .facts .l { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
 
 .apply { display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
+  background: var(--accent-2); color: var(--accent-contrast); border-radius: var(--radius); padding: 24px 28px; box-shadow: var(--shadow-2); }
+.apply strong { display: block; font: 700 1.35rem/1.25 var(--font-display); margin-bottom: 4px; }
 .apply p { margin: 0; }
-.apply .btn { display: inline-block; text-decoration: none; padding: 12px 20px; border-radius: var(--radius-sm); }
+.apply .btn { display: inline-block; text-decoration: none; padding: 15px 30px; font-size: 1.05rem; border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--accent-2); }
+.apply .btn:hover { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); color: var(--accent-2); }
+.apply .btn:focus-visible { outline-color: var(--surface); }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .two-col ul, .plain ul { margin: 0; padding-left: 1.2em; }
